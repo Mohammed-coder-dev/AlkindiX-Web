@@ -117,7 +117,7 @@ a { color: inherit; text-decoration: none; text-underline-offset: 3px; }
 /* --------------------------------------------
    Typography
 --------------------------------------------- */
-h1 { font-size: var(--fs-1); line-height: 1.08; margin: 0 0 10px; letter-spacing: -0.02em; font-weight: 700; } /* enhanced */
+h1 { font-size: var(--fs-1); line-height: 1.08; margin: 0 0 10px; letter-spacing: -0.02em; font-weight: 700; }
 h2 { font-size: var(--fs-2); margin: 0 0 10px; letter-spacing: -0.01em; }
 h3 { font-size: var(--fs-3); margin: 0 0 8px; font-weight: 600; }
 .lead, p.lead { font-size: 1.12rem; color: var(--muted); max-width: 78ch; }
@@ -183,8 +183,8 @@ pre::after { content: attr(data-lang); position: absolute; top: 10px; right: 12p
 .card:hover { border-color: rgba(91,140,255,.35); box-shadow: 0 18px 54px rgba(0,0,0,.28); transform: translateY(-2px); }
 .card .card-body { padding: 22px; }
 
-figure.card img { transition: transform var(--ts) var(--ease); }          /* enhanced */
-figure.card:hover img { transform: scale(1.02); }                         /* enhanced */
+figure.card img { transition: transform var(--ts) var(--ease); }
+figure.card:hover img { transform: scale(1.02); }
 
 .grid { display:grid; gap: 20px; }
 @media (min-width: 720px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} .grid.cols-2{grid-template-columns:repeat(2,1fr)} }
@@ -215,7 +215,7 @@ figure.card:hover img { transform: scale(1.02); }                         /* enh
 .menu-panel[aria-modal="true"] { display:block; animation: panelIn var(--ts) var(--ease) forwards; }
 .menu-panel a { display:block; padding: 12px; border-radius: 12px; }
 .menu-panel a:hover { background: rgba(255,255,255,.04); }
-.menu-panel a[aria-current="page"] { color: var(--text); background: rgba(91,140,255,.08); } /* enhanced */
+.menu-panel a[aria-current="page"] { color: var(--text); background: rgba(91,140,255,.08); }
 @keyframes panelIn { to { opacity: 1; transform: translateY(0) scale(1); } }
 
 /* --------------------------------------------
@@ -233,6 +233,14 @@ figure.card:hover img { transform: scale(1.02); }                         /* enh
 .project .kicker { color: var(--accent-2); font-weight:700; font-size:.85rem; letter-spacing:.04em; text-transform: uppercase; }
 .project p { color: var(--muted); }
 .project .actions { display:flex; gap:10px; margin-top: 12px; }
+
+/* Photography card specific styles */
+.project:nth-child(3) .kicker { 
+  background: linear-gradient(135deg, #8B5CF6, #EC4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
 /* --------------------------------------------
    Forms — inputs that feel premium
@@ -289,8 +297,8 @@ details summary::-webkit-details-marker { display: none; }
 --------------------------------------------- */
 footer { border-top: var(--border); padding: 32px 0 48px; color: var(--muted); }
 footer a { color: var(--text); }
-footer nav a { font-weight: 600; opacity: .85; }            /* enhanced */
-footer nav a:hover { opacity: 1; color: var(--accent); }    /* enhanced */
+footer nav a { font-weight: 600; opacity: .85; }
+footer nav a:hover { opacity: 1; color: var(--accent); }
 
 /* --------------------------------------------
    Offline Banner
@@ -394,6 +402,20 @@ a[aria-current="page"]::after { content: ""; display: inline-block; width: 6px; 
 .row { display:flex; align-items:center; gap: var(--space-sm); flex-wrap: wrap; }
 
 /* --------------------------------------------
+   Contact Card
+--------------------------------------------- */
+.contact-card {
+  text-align: center;
+  padding: var(--space-xl);
+  background: linear-gradient(180deg, rgba(91,140,255,.08), rgba(255,255,255,0));
+}
+
+.contact-actions {
+  justify-content: center;
+  margin-top: var(--space-lg);
+}
+
+/* --------------------------------------------
    Print (clean resumes/essays)
 --------------------------------------------- */
 @media print {
@@ -401,4 +423,83 @@ a[aria-current="page"]::after { content: ""; display: inline-block; width: 6px; 
   .header, footer, .btn, .menu-panel { display: none !important; }
   a { text-decoration: underline; color: #000; }
   .card, .list-item, pre, .table { border-color: #ddd; box-shadow: none; }
+}
+
+/* --------------------------------------------
+   Photography Section Enhancements
+--------------------------------------------- */
+.photography-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.photography-item {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.photography-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+
+.photography-item:hover img {
+  transform: scale(1.05);
+}
+
+.photography-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-md);
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+}
+
+.photography-item:hover .photography-overlay {
+  opacity: 1;
+}
+
+/* --------------------------------------------
+   Responsive Improvements
+--------------------------------------------- */
+@media (max-width: 768px) {
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .hero-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .badge-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .grid.cols-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------
+   Performance Optimizations
+--------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
