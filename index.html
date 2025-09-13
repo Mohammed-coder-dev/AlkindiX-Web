@@ -112,59 +112,44 @@
   <a href="#main" class="skip" aria-label="Skip to main content">Skip to content</a>
 
   <!-- Header / Global Nav -->
-  <header class="header animated-header" role="banner">
-    <div class="container nav">
-      <a href="#top" class="brand focus-ring" aria-label="AlkindiX home">
-        <span class="dot" aria-hidden="true"></span>
+  <header class="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="AlkindiX home">
+        <span class="brand__mark">A</span>
         <span>AlkindiX</span>
       </a>
-
-      <nav class="menu" aria-label="Primary">
-        <a href="#about" class="focus-ring">About</a>
-        <a href="https://proofx.org" class="focus-ring" target="_blank" rel="noopener noreferrer">ProofX</a>
-        <a href="https://architectofsilence.com" class="focus-ring" target="_blank" rel="noopener noreferrer">Essays</a>
-        <a href="#projects" class="focus-ring">Projects</a>
-        <a href="#research" class="focus-ring">Research</a>
-        <a href="#case-studies" class="focus-ring">Case Studies</a>
-        <a href="#honors" class="focus-ring">Honors</a>
-        <a href="#contact" class="focus-ring">Contact</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="nav__links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="https://proofx.org" target="_blank" rel="noopener noreferrer">ProofX</a>
+        <a href="https://architectofsilence.com" target="_blank" rel="noopener noreferrer">Essays</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#honors">Honors</a>
+        <a href="#contact">Contact</a>
       </nav>
-
-      <div class="row" style="gap:10px;align-items:center">
-        <button class="btn secondary theme-toggle" aria-pressed="false" aria-label="Toggle theme">Theme</button>
-        <div class="menu-btn">
-          <button class="btn secondary" aria-expanded="false" aria-controls="menuPanel" aria-haspopup="dialog" aria-label="Open menu">Menu</button>
-        </div>
-      </div>
-    </div>
-
-    <div id="menuPanel" class="menu-panel container" role="dialog" aria-modal="false" aria-label="Mobile navigation" hidden>
-      <a href="#about">About</a>
-      <a href="https://proofx.org" target="_blank" rel="noopener noreferrer">ProofX</a>
-      <a href="https://architectofsilence.com" target="_blank" rel="noopener noreferrer">Essays</a>
-      <a href="#projects">Projects</a>
-      <a href="#research">Research</a>
-      <a href="#case-studies">Case Studies</a>
-      <a href="#honors">Honors</a>
-      <a href="#contact">Contact</a>
     </div>
   </header>
 
   <main id="main">
     <!-- Hero -->
-    <section class="container hero hero-banner" id="top" aria-label="Hero">
-      <div class="hero-pattern" aria-hidden="true"></div>
-      <span class="pill" aria-label="Tagline">Symbolic AI × Quantum Reasoning × Mathematics</span>
-      <h1>Confronting the World's Hardest Unsolved Conjectures</h1>
-      <p class="lead">AlkindiX is the personal HQ of <strong>Alkindi</strong> — founder of <strong>ProofX</strong> and <strong>ProjectX</strong>. Research-grade systems spanning symbolic logic, theorem synthesis, and high-impact computation.</p>
-      <div class="hero-cta" role="group" aria-label="Primary calls to action">
-        <a class="btn accent" href="https://proofx.org" target="_blank" rel="noopener noreferrer">Explore ProofX</a>
-        <a class="btn secondary" href="#contact">Request a Briefing</a>
-      </div>
-      <div class="badge-row" aria-label="Highlights">
-        <span class="pill">Deeptech Founder</span>
-        <span class="pill">Aspiring MIT Student</span>
-        <span class="pill">Research-Lab-Grade Builds</span>
+    <section class="hero" id="top" aria-label="Hero">
+      <div class="container hero__wrap">
+        <span class="pill" aria-label="Tagline">Symbolic AI × Quantum Reasoning × Mathematics</span>
+        <h1 class="hero__h1" data-no-wrap>Confronting the World's Hardest Unsolved Conjectures</h1>
+        <p class="hero__sub">AlkindiX is the personal HQ of <strong>Alkindi</strong> — founder of <strong>ProofX</strong> and <strong>ProjectX</strong>. Research-grade systems spanning symbolic logic, theorem synthesis, and high-impact computation.</p>
+        <div class="hero__actions" role="group" aria-label="Primary calls to action">
+          <a class="btn btn--primary btn--pill" href="https://proofx.org" target="_blank" rel="noopener noreferrer">Explore ProofX</a>
+          <a class="btn btn--white btn--pill" href="#contact">Request a Briefing</a>
+        </div>
+        <div class="badge-row" aria-label="Highlights">
+          <span class="pill">Deeptech Founder</span>
+          <span class="pill">Aspiring MIT Student</span>
+          <span class="pill">Research-Lab-Grade Builds</span>
+        </div>
       </div>
     </section>
 
@@ -359,7 +344,7 @@
         <h2 id="testimonials-title">External Validation</h2>
         <p class="lead">Recognition from leading institutions and mentors.</p>
         
-        <div class="grid cols-3" style="margin-top: 28px; gap: 20px;">
+        <div class="grid cards cols-3" style="margin-top: 28px; gap: 20px;">
           <div style="display: flex; justify-content: center;">
             <div style="height: 80px; width: 120px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center;">MIT Logo</div>
           </div>
@@ -390,7 +375,7 @@
       <div class="container">
         <h2 id="kpi-title">Signal Over Noise</h2>
         <p class="lead">Concrete traction and research signal — not vanity metrics.</p>
-        <div class="grid cols-3" style="margin-top:16px;">
+        <div class="grid cards cols-3" style="margin-top:16px;">
           <article class="card" aria-label="Theorem Synthesis">
             <div class="card-body">
               <div class="pill">ProofX</div>
@@ -421,7 +406,7 @@
       <div class="container">
         <h2 id="projects-title">Flagship Projects</h2>
         <p class="lead">A compact portfolio engineered for intellectual depth and real-world impact.</p>
-        <div class="grid cols-3" style="margin-top:16px;">
+        <div class="grid cards cols-3" style="margin-top:16px;">
           <article class="card project project-card" aria-labelledby="pfx-title">
             <div class="kicker">ProofX</div>
             <h3 id="pfx-title">Symbolic AI &amp; Proof Orchestration</h3>
@@ -509,7 +494,7 @@
         <h2 id="media-title">Featured In</h2>
         <p class="lead">Select media coverage, podcast appearances, and blog features.</p>
         
-        <div class="grid cols-3" style="margin-top: 28px; gap: 20px;">
+        <div class="grid cards cols-3" style="margin-top: 28px; gap: 20px;">
           <div class="card" style="padding: 20px; text-align: center;">
             <div style="height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
               [Press Logo 1]
