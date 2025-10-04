@@ -1,83 +1,80 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
 
 /* --------------------------------------------
-   Elite Design System — 99.99th Percentile
+   ELITE DESIGN SYSTEM - PERFECT SPACING & STYLING
 --------------------------------------------- */
 :root {
-  /* 🎯 Color System - Mathematical Precision */
-  --bg: #0a0a0a;
-  --bg-elevated: #111111;
-  --bg-higher: #1a1a1a;
-  --surface: #151515;
+  /* 🎯 PERFECT COLOR SYSTEM */
+  --bg: #000000;
+  --bg-elevated: #0a0a0a;
+  --bg-higher: #141414;
+  --surface: #111111;
   --surface-border: #262626;
-  --surface-hover: #1f1f1f;
-  --text-primary: #fafafa;
-  --text-secondary: #a3a3a3;
-  --text-tertiary: #737373;
-  --accent-primary: #10b981;
-  --accent-primary-glow: rgba(16, 185, 129, 0.4);
-  --accent-secondary: #06d6a0;
-  --accent-gradient: linear-gradient(135deg, #10b981 0%, #06d6a0 100%);
-  --accent-glow: 0 0 0 1px rgba(16, 185, 129, 0.1), 0 4px 24px rgba(16, 185, 129, 0.1);
-  
-  /* 🎯 Elevation System - Physics-based */
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.32);
+  --surface-hover: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1a1;
+  --text-tertiary: #6a6a6a;
+  --accent-primary: #00dc82;
+  --accent-secondary: #00f0a0;
+  --accent-gradient: linear-gradient(135deg, #00dc82 0%, #00f0a0 100%);
+  --accent-glow: 0 0 0 1px rgba(0, 220, 130, 0.1), 0 8px 32px rgba(0, 220, 130, 0.12);
+
+  /* 🎯 PERFECT SPACING SYSTEM - 8px grid */
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* 🎯 PERFECT TYPOGRAPHY */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 30px;
+  --text-4xl: 36px;
+  --text-5xl: 48px;
+  --text-6xl: 60px;
+  --text-hero: clamp(48px, 8vw, 96px);
+
+  /* 🎯 PERFECT BORDERS */
+  --radius-sm: 4px;
+  --radius: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* 🎯 PERFECT SHADOWS */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.32);
   --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.24);
   --shadow-lg: 0 16px 64px rgba(0, 0, 0, 0.16);
   --shadow-xl: 0 32px 128px rgba(0, 0, 0, 0.12);
-  
-  /* 🎯 Layout System - Golden Ratio */
-  --space-3xs: 2px;
-  --space-2xs: 4px;
-  --space-xs: 8px;
-  --space-sm: 12px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
-  --space-2xl: 48px;
-  --space-3xl: 64px;
-  --space-4xl: 96px;
-  
-  /* 🎯 Typography System - Optical Scale */
-  --fs-xs: 0.75rem;
-  --fs-sm: 0.875rem;
-  --fs-base: 1rem;
-  --fs-lg: 1.125rem;
-  --fs-xl: 1.25rem;
-  --fs-2xl: 1.5rem;
-  --fs-3xl: 1.875rem;
-  --fs-4xl: 2.25rem;
-  --fs-5xl: 3rem;
-  --fs-6xl: 3.75rem;
-  --fs-hero: clamp(3.5rem, 8vw, 8rem);
-  
-  /* 🎯 Motion System - Spring Physics */
-  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
-  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
-  --spring-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  
-  /* 🎯 Layout Constraints */
-  --max-width: 1200px;
-  --header-height: 64px;
-  --radius-sm: 4px;
-  --radius: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
-  --radius-2xl: 24px;
+
+  /* 🎯 PERFECT MOTION */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 /* --------------------------------------------
-   🚀 Performance-Optimized Base Reset
+   RESET WITH PERFECT SPACING
 --------------------------------------------- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeSpeed;
 }
 
 html {
@@ -90,228 +87,207 @@ body {
   font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   background: var(--bg);
   color: var(--text-primary);
-  overflow-x: hidden;
-  position: relative;
-}
-
-/* 🎯 Micro-optimized focus system */
-:focus-visible {
-  outline: 2px solid var(--accent-primary);
-  outline-offset: 2px;
-  border-radius: var(--radius-sm);
-}
-
-/* 🎯 GPU-accelerated selection */
-::selection {
-  background: var(--accent-primary);
-  color: white;
-  text-shadow: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
 }
 
 /* --------------------------------------------
-   🎯 Elite Typography System
+   PERFECT TYPOGRAPHY SYSTEM
 --------------------------------------------- */
-.typography-hero {
-  font-size: var(--fs-hero);
+.h1 {
+  font-size: var(--text-hero);
   font-weight: 900;
-  line-height: 0.9;
-  letter-spacing: -0.04em;
-  background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-6);
 }
 
-.typography-display {
-  font-size: var(--fs-6xl);
+.h2 {
+  font-size: var(--text-5xl);
   font-weight: 700;
   line-height: 1.1;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-5);
 }
 
-.typography-h1 {
-  font-size: var(--fs-5xl);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-
-.typography-h2 {
-  font-size: var(--fs-4xl);
+.h3 {
+  font-size: var(--text-3xl);
   font-weight: 600;
   line-height: 1.2;
-  letter-spacing: -0.01em;
+  margin-bottom: var(--space-4);
 }
 
-.typography-h3 {
-  font-size: var(--fs-3xl);
+.h4 {
+  font-size: var(--text-xl);
   font-weight: 600;
   line-height: 1.3;
+  margin-bottom: var(--space-3);
 }
 
-.typography-lead {
-  font-size: var(--fs-xl);
+.lead {
+  font-size: var(--text-lg);
   color: var(--text-secondary);
   line-height: 1.6;
-  max-width: 65ch;
+  margin-bottom: var(--space-6);
+  max-width: 560px;
 }
 
-.typography-body {
-  font-size: var(--fs-base);
+.body {
+  font-size: var(--text-base);
   color: var(--text-secondary);
   line-height: 1.7;
+  margin-bottom: var(--space-4);
+}
+
+.caption {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  line-height: 1.5;
 }
 
 /* --------------------------------------------
-   🚀 Next-Gen Component System
+   PERFECT LAYOUT COMPONENTS
 --------------------------------------------- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
 
-/* 🎯 Elite Card System */
+.section {
+  padding: var(--space-20) 0;
+}
+
+.section-sm {
+  padding: var(--space-12) 0;
+}
+
+.section-lg {
+  padding: var(--space-24) 0;
+}
+
+/* --------------------------------------------
+   PERFECT CARD SYSTEM
+--------------------------------------------- */
 .card {
-  position: relative;
   background: var(--surface);
   border: 1px solid var(--surface-border);
   border-radius: var(--radius-xl);
-  backdrop-filter: blur(20px);
-  transform: translateZ(0);
-  transition: all 0.5s var(--ease-out-expo);
+  padding: var(--space-6);
+  transition: all 0.3s var(--ease);
+  position: relative;
   overflow: hidden;
 }
 
 .card::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.1) 0%, 
-    rgba(255, 255, 255, 0.05) 50%, 
-    transparent 100%);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--accent-gradient);
   opacity: 0;
-  transition: opacity 0.5s var(--ease-out-expo);
-  pointer-events: none;
-}
-
-.card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius-xl);
-  padding: 1px;
-  background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.2), 
-    rgba(255, 255, 255, 0.02));
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: subtract;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.5s var(--ease-out-expo);
+  transition: opacity 0.3s var(--ease);
 }
 
 .card:hover {
-  transform: translateY(-8px) translateZ(0);
   border-color: var(--accent-primary);
-  box-shadow: var(--shadow-xl), var(--accent-glow);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg), var(--accent-glow);
 }
 
-.card:hover::before,
-.card:hover::after {
+.card:hover::before {
   opacity: 1;
 }
 
-/* 🎯 Elite Button System */
+.card-lg {
+  padding: var(--space-8);
+}
+
+.card-sm {
+  padding: var(--space-4);
+}
+
+/* --------------------------------------------
+   PERFECT BUTTON SYSTEM
+--------------------------------------------- */
 .btn {
-  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-xs);
-  padding: 12px 24px;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
   border: 1px solid var(--surface-border);
   border-radius: var(--radius-lg);
   background: var(--surface);
   color: var(--text-primary);
-  font-size: var(--fs-sm);
+  font-size: var(--text-sm);
   font-weight: 600;
   line-height: 1;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.4s var(--ease-out-expo);
-  transform: translateZ(0);
+  transition: all 0.2s var(--ease);
+  position: relative;
   overflow: hidden;
-  user-select: none;
 }
 
 .btn::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.1) 0%, 
-    rgba(255, 255, 255, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 100%);
   opacity: 0;
-  transition: opacity 0.4s var(--ease-out-expo);
-}
-
-.btn::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius-lg);
-  padding: 1px;
-  background: linear-gradient(135deg, 
-    var(--accent-primary), 
-    var(--accent-secondary));
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: subtract;
-  opacity: 0;
-  transition: opacity 0.4s var(--ease-out-expo);
-  pointer-events: none;
+  transition: opacity 0.2s var(--ease);
 }
 
 .btn:hover {
-  transform: translateY(-2px) translateZ(0);
   border-color: var(--accent-primary);
-  box-shadow: var(--shadow-lg), var(--accent-glow);
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
-.btn:hover::before,
-.btn:hover::after {
+.btn:hover::before {
   opacity: 1;
-}
-
-.btn:active {
-  transform: translateY(0) translateZ(0);
-  transition-duration: 0.1s;
 }
 
 .btn-primary {
   background: var(--accent-gradient);
-  color: white;
+  color: #000;
   border: none;
-}
-
-.btn-primary::before {
-  background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.2) 0%, 
-    rgba(255, 255, 255, 0.1) 100%);
+  font-weight: 700;
 }
 
 .btn-primary:hover {
-  box-shadow: var(--shadow-lg), 0 8px 32px rgba(16, 185, 129, 0.3);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), 0 8px 32px rgba(0, 220, 130, 0.24);
 }
 
-/* 🎯 Elite Navigation System */
+.btn-lg {
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--text-base);
+}
+
+.btn-sm {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-xs);
+}
+
+/* --------------------------------------------
+   PERFECT HEADER & NAVIGATION
+--------------------------------------------- */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  height: var(--header-height);
-  background: rgba(10, 10, 10, 0.8);
-  backdrop-filter: blur(20px) saturate(180%);
+  height: 64px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--surface-border);
-  transform: translateZ(0);
 }
 
 .nav {
@@ -319,74 +295,56 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  max-width: var(--max-width);
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--space-lg);
+  padding: 0 var(--space-6);
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: var(--space-lg);
+  gap: var(--space-4);
   list-style: none;
 }
 
 .nav-link {
   color: var(--text-secondary);
+  font-size: var(--text-sm);
   font-weight: 500;
   text-decoration: none;
-  padding: var(--space-xs) var(--space-sm);
+  padding: var(--space-2) var(--space-3);
   border-radius: var(--radius);
-  transition: all 0.3s var(--ease-out-expo);
-  position: relative;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: var(--accent-gradient);
-  transition: all 0.3s var(--ease-out-expo);
-  transform: translateX(-50%);
+  transition: all 0.2s var(--ease);
 }
 
 .nav-link:hover {
   color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
 }
 
-.nav-link:hover::after {
-  width: 100%;
-}
-
-.nav-link-active {
+.nav-link.active {
   color: var(--text-primary);
+  background: rgba(0, 220, 130, 0.1);
 }
 
-.nav-link-active::after {
-  width: 100%;
-}
-
-/* 🎯 Elite Hero System */
+/* --------------------------------------------
+   PERFECT HERO SECTION
+--------------------------------------------- */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 64px 0 var(--space-20);
   position: relative;
   overflow: hidden;
-  padding: var(--header-height) 0 var(--space-4xl);
 }
 
-.hero-background {
+.hero-bg {
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(ellipse at 20% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(6, 214, 160, 0.05) 0%, transparent 50%),
-    radial-gradient(ellipse at 40% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+    radial-gradient(ellipse at 20% 50%, rgba(0, 220, 130, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(0, 240, 160, 0.04) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -394,191 +352,211 @@ body {
   text-align: center;
   position: relative;
   z-index: 1;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 0 var(--space-lg);
 }
 
 .hero-actions {
   display: flex;
-  gap: var(--space-md);
+  gap: var(--space-4);
   justify-content: center;
-  margin-top: var(--space-2xl);
+  margin-top: var(--space-8);
   flex-wrap: wrap;
 }
 
-/* 🎯 Elite Grid System */
+/* --------------------------------------------
+   PERFECT GRID SYSTEM
+--------------------------------------------- */
 .grid {
   display: grid;
-  gap: var(--space-xl);
+  gap: var(--space-6);
 }
 
 .grid-cols-2 {
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .grid-cols-3 {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .grid-cols-4 {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
 }
 
-/* 🎯 Elite Input System */
+/* --------------------------------------------
+   PERFECT FORM ELEMENTS
+--------------------------------------------- */
 .input {
   width: 100%;
-  padding: 12px 16px;
+  padding: var(--space-3) var(--space-4);
   border: 1px solid var(--surface-border);
   border-radius: var(--radius-lg);
   background: var(--surface);
   color: var(--text-primary);
-  font-size: var(--fs-base);
-  transition: all 0.3s var(--ease-out-expo);
-  backdrop-filter: blur(10px);
+  font-size: var(--text-base);
+  transition: all 0.2s var(--ease);
 }
 
 .input:focus {
   outline: none;
   border-color: var(--accent-primary);
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1), var(--shadow-sm);
+  box-shadow: 0 0 0 3px rgba(0, 220, 130, 0.1);
 }
 
 .input::placeholder {
   color: var(--text-tertiary);
 }
 
-/* --------------------------------------------
-   🚀 Advanced Animation System
---------------------------------------------- */
-@keyframes float {
-  0%, 100% { transform: translateY(0px) translateZ(0); }
-  50% { transform: translateY(-20px) translateZ(0); }
+.label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  color: var(--text-primary);
 }
 
-@keyframes glow {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
+.form-group {
+  margin-bottom: var(--space-4);
 }
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px) translateZ(0);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) translateZ(0);
-  }
-}
-
-.animate-float {
-  animation: float 6s var(--ease-in-out-expo) infinite;
-}
-
-.animate-glow {
-  animation: glow 3s var(--ease-in-out-expo) infinite;
-}
-
-.animate-slide-up {
-  animation: slideUp 0.8s var(--ease-out-expo) both;
-}
-
-/* 🎯 Stagger animations */
-.animate-stagger > * {
-  opacity: 0;
-  animation: slideUp 0.8s var(--ease-out-expo) both;
-}
-
-.animate-stagger > *:nth-child(1) { animation-delay: 0.1s; }
-.animate-stagger > *:nth-child(2) { animation-delay: 0.2s; }
-.animate-stagger > *:nth-child(3) { animation-delay: 0.3s; }
-.animate-stagger > *:nth-child(4) { animation-delay: 0.4s; }
-.animate-stagger > *:nth-child(5) { animation-delay: 0.5s; }
 
 /* --------------------------------------------
-   🎯 Utility Classes - Atomic Design
+   PERFECT UTILITY CLASSES
 --------------------------------------------- */
-.container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 var(--space-lg);
-}
+/* Spacing */
+.m-0 { margin: var(--space-0); }
+.m-1 { margin: var(--space-1); }
+.m-2 { margin: var(--space-2); }
+.m-3 { margin: var(--space-3); }
+.m-4 { margin: var(--space-4); }
+.m-5 { margin: var(--space-5); }
+.m-6 { margin: var(--space-6); }
 
-.section {
-  padding: var(--space-4xl) 0;
-}
+.mt-0 { margin-top: var(--space-0); }
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+.mt-4 { margin-top: var(--space-4); }
+.mt-5 { margin-top: var(--space-5); }
+.mt-6 { margin-top: var(--space-6); }
+.mt-8 { margin-top: var(--space-8); }
+.mt-10 { margin-top: var(--space-10); }
 
-.section-tight {
-  padding: var(--space-2xl) 0;
-}
+.mb-0 { margin-bottom: var(--space-0); }
+.mb-1 { margin-bottom: var(--space-1); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-5 { margin-bottom: var(--space-5); }
+.mb-6 { margin-bottom: var(--space-6); }
+.mb-8 { margin-bottom: var(--space-8); }
+.mb-10 { margin-bottom: var(--space-10); }
 
+.p-0 { padding: var(--space-0); }
+.p-1 { padding: var(--space-1); }
+.p-2 { padding: var(--space-2); }
+.p-3 { padding: var(--space-3); }
+.p-4 { padding: var(--space-4); }
+.p-5 { padding: var(--space-5); }
+.p-6 { padding: var(--space-6); }
+.p-8 { padding: var(--space-8); }
+
+/* Flexbox */
+.flex { display: flex; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+
+/* Grid */
+.gap-1 { gap: var(--space-1); }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+.gap-4 { gap: var(--space-4); }
+.gap-5 { gap: var(--space-5); }
+.gap-6 { gap: var(--space-6); }
+
+/* Text */
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-tertiary { color: var(--text-tertiary); }
 
-.mt-auto { margin-top: auto; }
-.mb-auto { margin-bottom: auto; }
-
+/* Width/Height */
 .w-full { width: 100%; }
+.w-auto { width: auto; }
 .h-full { height: 100%; }
+.h-auto { height: auto; }
 .min-h-screen { min-height: 100vh; }
 
-.flex { display: flex; }
-.items-center { align-items: center; }
-.justify-center { justify-content: center; }
-.justify-between { justify-content: space-between; }
-
-.gap-xs { gap: var(--space-xs); }
-.gap-sm { gap: var(--space-sm); }
-.gap-md { gap: var(--space-md); }
-.gap-lg { gap: var(--space-lg); }
+/* Other */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.overflow-hidden { overflow: hidden; }
+.pointer-events-none { pointer-events: none; }
 
 /* --------------------------------------------
-   🚀 Performance Optimizations
+   PERFECT ANIMATIONS
 --------------------------------------------- */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* 🎯 Container queries for adaptive design */
-@container (min-width: 400px) {
-  .card { padding: var(--space-xl); }
-}
-
-/* 🎯 Scroll-driven animations */
-@supports (animation-timeline: view()) {
-  .animate-on-scroll {
-    animation: slideUp linear both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
+.animate-fadeIn {
+  animation: fadeIn 0.6s var(--ease) both;
+}
+
+.animate-slideIn {
+  animation: slideIn 0.6s var(--ease) both;
+}
+
 /* --------------------------------------------
-   📱 Mobile-First Responsive Design
+   PERFECT RESPONSIVE DESIGN
 --------------------------------------------- */
+@media (max-width: 1024px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
-  :root {
-    --space-lg: 20px;
-    --space-xl: 24px;
-    --space-2xl: 32px;
-    --space-3xl: 48px;
-    --space-4xl: 64px;
+  .container {
+    padding: 0 var(--space-4);
   }
   
   .hero-actions {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
   }
   
   .btn {
     width: 100%;
-    justify-content: center;
+    max-width: 280px;
   }
   
   .grid-cols-2,
@@ -591,92 +569,66 @@ body {
     display: none;
   }
   
-  .mobile-menu-btn {
-    display: block;
+  .h1 {
+    font-size: clamp(36px, 10vw, 60px);
+  }
+  
+  .h2 {
+    font-size: var(--text-4xl);
   }
 }
 
 @media (max-width: 480px) {
-  .hero-content {
-    padding: 0 var(--space-md);
+  .section {
+    padding: var(--space-12) 0;
   }
   
-  .typography-hero {
-    font-size: clamp(2.5rem, 12vw, 4rem);
+  .section-lg {
+    padding: var(--space-16) 0;
+  }
+  
+  .card {
+    padding: var(--space-4);
+  }
+  
+  .hero {
+    padding: 64px 0 var(--space-12);
   }
 }
 
 /* --------------------------------------------
-   🎯 Dark/Light Theme Excellence
+   PERFECT DARK/LIGHT THEME
 --------------------------------------------- */
 @media (prefers-color-scheme: light) {
   :root {
     --bg: #ffffff;
-    --bg-elevated: #f8fafc;
-    --bg-higher: #f1f5f9;
+    --bg-elevated: #f8f9fa;
+    --bg-higher: #e9ecef;
     --surface: #ffffff;
-    --surface-border: #e2e8f0;
-    --surface-hover: #f8fafc;
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --text-tertiary: #94a3b8;
-    --accent-primary: #059669;
-    --accent-secondary: #10b981;
+    --surface-border: #dee2e6;
+    --surface-hover: #f8f9fa;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --text-tertiary: #adb5bd;
+    --accent-primary: #00a86b;
+    --accent-secondary: #00dc82;
   }
 }
 
 /* --------------------------------------------
-   🚀 Elite Loading States
+   PERFECT FOCUS STATES
 --------------------------------------------- */
-.skeleton {
-  background: linear-gradient(90deg, var(--surface) 25%, var(--surface-hover) 50%, var(--surface) 75%);
-  background-size: 200% 100%;
-  animation: loading 2s infinite;
-}
-
-@keyframes loading {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
 }
 
 /* --------------------------------------------
-   🎯 Micro-Interactions & Polish
+   PERFECT SELECTION
 --------------------------------------------- */
-.hover-lift {
-  transition: transform 0.3s var(--ease-out-back);
-}
-
-.hover-lift:hover {
-  transform: translateY(-4px) translateZ(0);
-}
-
-.glass {
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.gradient-text {
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* 🎯 Perfect scrollbar styling */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--surface-border);
-  border-radius: var(--radius-full);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--text-tertiary);
+::selection {
+  background: var(--accent-primary);
+  color: white;
+  text-shadow: none;
 }
