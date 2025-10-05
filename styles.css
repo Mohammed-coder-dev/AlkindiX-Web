@@ -70,6 +70,65 @@
   }
 }
 
+/* Skills Section Styles */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skill-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.skill-level {
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skill-bar {
+  height: 100%;
+  background: var(--grad-accent);
+  border-radius: 3px;
+  transition: width 0.8s var(--ease);
+}
+
+/* Vision Section Styles */
+.vision-pillar {
+  padding: 16px;
+  background: rgba(255,255,255,0.03);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--accent);
+}
+
+.vision-goals ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.vision-goals li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
+.vision-goals li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
 /* Theme overrides */
 html[data-theme='dark'] {
   color-scheme: dark;
