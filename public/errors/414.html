@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>414 URL_TOO_LONG - AlkindiX</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: #0d1117; color: #f0f6fc; line-height: 1.6;
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      padding: 2rem;
+    }
+    
+    .error-container { max-width: 600px; text-align: center; }
+    
+    .quantum-dot {
+      width: 8px; height: 8px; border-radius: 50%; background: #10a37f;
+      display: inline-block; margin-right: 8px; animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.1); }
+    }
+    
+    .brand {
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 2rem; font-weight: 700; font-size: 1.25rem;
+    }
+    
+    .error-code {
+      font-size: 4rem; font-weight: 900; color: #10a37f;
+      margin-bottom: 1rem; line-height: 1;
+    }
+    
+    .error-type {
+      font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem;
+      color: #f0f6fc;
+    }
+    
+    .error-category {
+      display: inline-block; padding: 0.25rem 0.75rem;
+      background: rgba(16, 163, 127, 0.1); color: #1ed760;
+      border-radius: 999px; font-size: 0.8rem; font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    
+    .error-description {
+      color: #8b949e; margin-bottom: 2rem; font-size: 1.1rem;
+    }
+    
+    .error-actions {
+      display: flex; gap: 1rem; justify-content: center;
+      flex-wrap: wrap; margin-bottom: 2rem;
+    }
+    
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none;
+      font-weight: 500; border: 1px solid #21262d; background: #161b22;
+      color: #f0f6fc; transition: all 0.2s ease; cursor: pointer;
+    }
+    
+    .btn:hover { border-color: #10a37f; transform: translateY(-1px); }
+    
+    .btn.primary { background: #10a37f; border-color: #10a37f; color: white; }
+    
+    .technical-details {
+      background: #161b22; border: 1px solid #21262d;
+      border-radius: 8px; padding: 1.5rem; margin-top: 2rem;
+      text-align: left;
+    }
+    
+    @media (max-width: 768px) {
+      .error-code { font-size: 3rem; }
+      .error-actions { flex-direction: column; }
+      .btn { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <div class="brand">
+      <span class="quantum-dot"></span>
+      <span>AlkindiX</span>
+    </div>
+    
+    <div class="error-code">414</div>
+    <div class="error-type">URL_TOO_LONG</div>
+    <div class="error-category">Request</div>
+    
+    <div class="error-description">
+      The URL requested is longer than the server is willing to process.
+    </div>
+    
+    <div class="error-actions">
+      <a href="/" class="btn primary">Return Home</a>
+      <a href="/research" class="btn">Explore Research</a>
+      <button onclick="location.reload()" class="btn">Try Again</button>
+    </div>
+    
+    <div class="technical-details">
+      <strong>What happened?</strong>
+      <p style="margin-top: 0.5rem; color: #8b949e;">
+        The URL in your request exceeds the maximum length allowed by the server.
+        This often happens with complex query parameters, deep linking, or malformed URLs.
+      </p>
+      <div style="margin-top: 1rem;">
+        <strong>Possible solutions:</strong>
+        <ul style="margin-top: 0.5rem; color: #8b949e; padding-left: 1.5rem;">
+          <li>Shorten the URL by removing unnecessary parameters</li>
+          <li>Use POST requests for large data instead of GET parameters</li>
+          <li>Check for URL encoding issues</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('timestamp').textContent = new Date().toISOString();
+  </script>
+</body>
+</html>
