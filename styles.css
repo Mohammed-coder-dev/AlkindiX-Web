@@ -26,16 +26,16 @@
   --radius-lg: 16px;
   --border: 1px solid #21262d;
 
-  /* Layout - Enhanced spacing values */
+  /* Layout - Optimized spacing */
   --maxw: 1200px;
   --space-2xs: 6px;
   --space-xs: 10px;
   --space-sm: 16px;
   --space-md: 20px;
-  --space-lg: 32px;
-  --space-xl: 40px;
-  --space-2xl: 60px;
-  --gutter: 28px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --gutter: 24px;
 
   /* Motion */
   --ts: 200ms;
@@ -43,8 +43,8 @@
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Typography */
-  --fs-1: clamp(2.5rem, 5vw, 3.5rem);
-  --fs-2: clamp(1.5rem, 3vw, 2rem);
+  --fs-1: clamp(2.25rem, 5vw, 3rem);
+  --fs-2: clamp(1.5rem, 3vw, 1.875rem);
   --fs-3: 1.125rem;
   --mono: 'SF Mono', SFMono-Regular, ui-monospace, Menlo, Consolas, monospace;
 
@@ -105,7 +105,7 @@ html, body {
 body {
   font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   font-size: 16px;
-  line-height: 1.6; /* Improved line height for better readability */
+  line-height: 1.6;
   color: var(--text);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
@@ -129,41 +129,69 @@ body::before {
 }
 
 /* --------------------------------------------
-   Typography - Clean & Professional
+   Enhanced Typography with Accent Underlines
 --------------------------------------------- */
 h1 {
   font-size: var(--fs-1);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  margin-bottom: var(--space-lg); /* Increased spacing */
+  margin-bottom: var(--space-md);
+  position: relative;
+  display: inline-block;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--grad-accent);
+  border-radius: 2px;
 }
 
 h2 {
   font-size: var(--fs-2);
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.3;
   letter-spacing: -0.01em;
-  margin-bottom: var(--space-md); /* Increased spacing */
+  margin-bottom: var(--space-md);
+  position: relative;
+  padding-bottom: var(--space-xs);
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  opacity: 0.7;
+  border-radius: 1px;
 }
 
 h3 {
   font-size: var(--fs-3);
   font-weight: 600;
-  margin-bottom: var(--space-md); /* Increased spacing */
+  margin-bottom: var(--space-sm);
+  color: var(--accent);
 }
 
 .lead {
   font-size: 1.125rem;
   color: var(--muted);
-  line-height: 1.7; /* Improved line height */
+  line-height: 1.7;
   max-width: 600px;
-  margin-bottom: var(--space-lg); /* Added spacing */
+  margin-bottom: var(--space-lg);
 }
 
-/* Enhanced paragraph spacing */
+/* Paragraph and content spacing */
 p {
-  margin-bottom: var(--space-md); /* Added consistent bottom margin */
+  margin-bottom: var(--space-sm);
 }
 
 p + p,
@@ -173,12 +201,12 @@ p + ol,
 ol + p,
 p + pre,
 pre + p {
-  margin-top: var(--space-lg); /* Increased spacing between elements */
+  margin-top: var(--space-md);
 }
 
-/* Enhanced list spacing */
 ul, ol {
   margin-bottom: var(--space-md);
+  padding-left: var(--space-lg);
 }
 
 li {
@@ -187,6 +215,141 @@ li {
 
 li:last-child {
   margin-bottom: 0;
+}
+
+/* --------------------------------------------
+   World-Class Navigation
+--------------------------------------------- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: var(--border);
+  margin-bottom: var(--space-xl);
+  transition: all var(--ts) var(--ease);
+}
+
+.header.scrolled {
+  background: rgba(13, 17, 23, 0.95);
+  box-shadow: var(--shadow);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) 0;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: all var(--ts-fast) var(--ease);
+}
+
+.brand:hover {
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.brand-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent-glow);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  transition: all var(--ts-fast) var(--ease);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link.active {
+  color: var(--accent);
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: var(--space-sm);
+  right: var(--space-sm);
+  height: 2px;
+  background: var(--accent);
+  border-radius: 1px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-xs);
+}
+
+.menu-toggle span {
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  transition: all var(--ts-fast) var(--ease);
+  border-radius: 1px;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* --------------------------------------------
@@ -200,8 +363,8 @@ li:last-child {
   transition: all var(--ts) var(--ease);
   position: relative;
   overflow: hidden;
-  padding: var(--space-lg); /* Increased card padding */
-  margin-bottom: var(--space-lg); /* Added spacing between cards */
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
 }
 
 .card::before {
@@ -226,7 +389,6 @@ li:last-child {
   opacity: 1;
 }
 
-/* Card content spacing */
 .card > *:last-child {
   margin-bottom: 0;
 }
@@ -238,7 +400,7 @@ li:last-child {
   display: inline-flex;
   align-items: center;
   gap: var(--space-xs);
-  padding: 12px 24px; /* Increased button padding */
+  padding: 12px 24px;
   border-radius: var(--radius);
   font-weight: 500;
   font-size: 14px;
@@ -250,13 +412,14 @@ li:last-child {
   background: var(--panel);
   color: var(--text);
   border: var(--border);
-  margin-bottom: var(--space-xs); /* Added button spacing */
+  margin-bottom: var(--space-xs);
 }
 
 .btn:hover {
   background: var(--panel-2);
   border-color: var(--accent);
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .btn.primary {
@@ -268,56 +431,17 @@ li:last-child {
 .btn.primary:hover {
   background: var(--accent-2);
   box-shadow: 0 0 20px var(--accent-glow);
-}
-
-/* --------------------------------------------
-   Navigation - Clean Header
---------------------------------------------- */
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(13, 17, 23, 0.8);
-  backdrop-filter: blur(20px);
-  border-bottom: var(--border);
-  margin-bottom: var(--space-xl); /* Added spacing below header */
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--space-md) 0;
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: var(--space-xs);
-  font-weight: 700;
-  font-size: 1.25rem;
-}
-
-.brand-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 12px var(--accent-glow);
+  transform: translateY(-1px) scale(1.02);
 }
 
 /* --------------------------------------------
    Hero Section
 --------------------------------------------- */
 .hero {
-  padding: clamp(8rem, 15vw, 14rem) 0; /* Increased padding */
+  padding: clamp(6rem, 12vw, 10rem) 0;
   text-align: center;
   position: relative;
-  margin-bottom: var(--space-2xl); /* Added spacing below hero */
+  margin-bottom: var(--space-2xl);
 }
 
 .hero::before {
@@ -333,9 +457,9 @@ li:last-child {
 
 .hero-cta {
   display: flex;
-  gap: var(--space-md); /* Increased button gap */
+  gap: var(--space-md);
   justify-content: center;
-  margin-top: var(--space-xl); /* Increased spacing */
+  margin-top: var(--space-xl);
   flex-wrap: wrap;
 }
 
@@ -344,8 +468,8 @@ li:last-child {
 --------------------------------------------- */
 .grid {
   display: grid;
-  gap: var(--space-xl); /* Increased gap */
-  margin-bottom: var(--space-xl); /* Added grid bottom spacing */
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
 }
 
 .grid.cols-2 {
@@ -356,9 +480,8 @@ li:last-child {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-/* Grid item spacing */
 .grid > * {
-  margin-bottom: 0; /* Reset since grid gap handles spacing */
+  margin-bottom: 0;
 }
 
 /* --------------------------------------------
@@ -366,14 +489,14 @@ li:last-child {
 --------------------------------------------- */
 .input {
   width: 100%;
-  padding: 14px 18px; /* Increased input padding */
+  padding: 14px 18px;
   border: var(--border);
   border-radius: var(--radius);
   background: var(--panel);
   color: var(--text);
   font-size: 14px;
   transition: all var(--ts) var(--ease);
-  margin-bottom: var(--space-md); /* Added input spacing */
+  margin-bottom: var(--space-md);
 }
 
 .input:focus {
@@ -382,9 +505,8 @@ li:last-child {
   box-shadow: 0 0 0 3px var(--ring);
 }
 
-/* Form group spacing */
 .form-group {
-  margin-bottom: var(--space-lg); /* Increased form group spacing */
+  margin-bottom: var(--space-lg);
 }
 
 /* --------------------------------------------
@@ -393,12 +515,12 @@ li:last-child {
 .container {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding-inline: clamp(1.5rem, 5vw, 4rem);
+  padding-inline: var(--gutter);
 }
 
 .section {
-  padding: clamp(5rem, 10vw, 10rem) 0; /* Increased vertical spacing */
-  margin-bottom: var(--space-2xl); /* Added section spacing */
+  padding: var(--space-2xl) 0;
+  margin-bottom: var(--space-2xl);
 }
 
 .text-muted {
@@ -429,7 +551,7 @@ li:last-child {
 --------------------------------------------- */
 .footer {
   border-top: var(--border);
-  padding: clamp(4rem, 10vw, 8rem) 0; /* Increased footer spacing */
+  padding: var(--space-2xl) 0;
   margin-top: var(--space-2xl);
 }
 
@@ -440,9 +562,41 @@ li:last-child {
   :root {
     --gutter: 18px;
     --space-md: 16px;
-    --space-lg: 24px;
-    --space-xl: 28px;
-    --space-2xl: 40px;
+    --space-lg: 20px;
+    --space-xl: 24px;
+    --space-2xl: 32px;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--panel);
+    border-top: var(--border);
+    flex-direction: column;
+    padding: var(--space-lg);
+    gap: var(--space-sm);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--ts) var(--ease);
+  }
+  
+  .nav-links.active {
+    transform: translateY(-100%);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: var(--space-md);
   }
   
   .hero-cta {
@@ -459,13 +613,28 @@ li:last-child {
   .grid.cols-2,
   .grid.cols-3 {
     grid-template-columns: 1fr;
-    gap: var(--space-lg);
+    gap: var(--space-md);
   }
   
-  /* Maintain good spacing on mobile */
   .card {
     padding: var(--space-md);
     margin-bottom: var(--space-md);
+  }
+  
+  h1::after,
+  h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: var(--space-xs) var(--gutter);
+  }
+  
+  .hero {
+    padding: var(--space-2xl) 0;
   }
 }
 
@@ -494,19 +663,19 @@ pre {
   background: var(--panel-2);
   border: var(--border);
   border-radius: var(--radius);
-  padding: var(--space-lg); /* Increased code block padding */
+  padding: var(--space-lg);
   overflow-x: auto;
   font-family: var(--mono);
   font-size: 13px;
-  line-height: 1.5; /* Improved line height */
-  margin-bottom: var(--space-md); /* Added code block spacing */
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
 }
 
 code {
   font-family: var(--mono);
   font-size: 0.9em;
   background: var(--panel);
-  padding: 3px 8px; /* Increased code padding */
+  padding: 3px 8px;
   border-radius: 4px;
   margin: 0 2px;
 }
