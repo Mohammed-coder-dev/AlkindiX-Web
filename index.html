@@ -1,102 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
   <title>Alkindi</title>
-  <meta name="description" content="Alkindi — systems, computation, photography, and slow thinking." />
+  <meta name="description" content="Personal HQ — systems, computation, photography, and quiet work."/>
 
-  <link rel="canonical" href="https://alkindix.com/" />
-  <link rel="icon" href="/favicon.ico" />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://alkindix.com/"/>
+
+  <!-- OG -->
+  <meta property="og:title" content="Alkindi"/>
+  <meta property="og:description" content="Systems, computation, photography, and slow thinking."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://alkindix.com/"/>
+  <meta property="og:image" content="meta.jpg"/>
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Alkindi"/>
+  <meta name="twitter:description" content="Systems, computation, photography, and slow thinking."/>
+  <meta name="twitter:image" content="meta.jpg"/>
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="favicon.ico"/>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+  <link rel="manifest" href="site.webmanifest"/>
+
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- HEADER -->
-  <header class="header" role="banner">
-    <div class="container header__inner">
-      <a class="brand" href="/">Alkindi</a>
+  <!-- ========================= HEADER ========================= -->
+  <header class="nav" role="banner">
+    <div class="container nav__inner">
+      <a class="brand" href="#top" aria-label="Alkindi home">
+        <span class="brand__text">Alkindi</span>
+      </a>
 
-      <nav class="nav" aria-label="Primary Navigation">
-        <ul class="nav__links">
-          <li><a href="#about">About</a></li>
-          <li><a href="https://proofx.org" target="_blank" rel="noopener">ProofX</a></li>
-          <li><a href="https://photographyx.org" target="_blank" rel="noopener">PhotographyX</a></li>
-          <li><a href="https://architectofsilence.com" target="_blank" rel="noopener">MemoirX</a></li>
-          <li><a href="https://www.linkedin.com/in/alkindi-network/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <button class="nav__toggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__links" role="navigation" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#proofx">ProofX</a>
+        <a href="#photographyx">PhotographyX</a>
+        <a href="#memoirx">MemoirX</a>
+        <a href="https://www.linkedin.com/in/alkindi-network/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-
-  <!-- HERO -->
-  <section id="hero" class="hero">
-    <div class="container narrow hero__inner">
-      <h1 class="hero__title">Hi — I’m Alkindi.</h1>
-      <p class="hero__text">
+  <!-- ========================= HERO ========================= -->
+  <section id="top" class="section hero" aria-labelledby="hero-title">
+    <div class="container hero__wrap">
+      <h1 id="hero-title" class="hero__h1">Hi — I’m Alkindi.</h1>
+      <p class="hero__sub">
         I explore systems — how ideas become structure; how structure becomes clarity.
-        This space gathers what I follow: computation, photography, and slow thinking.
+        This space collects what I follow: computation, photography, and slow thinking.
       </p>
     </div>
   </section>
 
+  <!-- ========================= ABOUT ========================= -->
+  <section id="about" class="section" aria-labelledby="about-title">
+    <div class="container card">
+      <h2 id="about-title">About</h2>
+      <p>
+        I grew up curious about how things fit together — tools, patterns, encoded rules.
+        Over time that instinct shifted toward computation, geometry, and structure.
+      </p>
+      <p class="muted">
+        This site is a quiet corner — not a résumé, not a pitch.
+        Just a place to keep the threads of what I study and build.
+      </p>
+    </div>
+  </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section__title">About</h2>
-
-      <div class="card">
-        <p>
-          I grew up curious about how things fit together — mechanical tools, coded systems,
-          structural landscapes. Over time that instinct evolved into an interest in computation,
-          geometry, and the textures beneath ordinary life.
-        </p>
-
-        <p>
-          I value clarity and slow thinking: an approach where speed matters less than depth.
-          Most of my work explores how ideas crystallize into enduring structures —
-          frameworks rather than flashes.
-        </p>
+  <!-- ========================= PROOFX ========================= -->
+  <section id="proofx" class="section" aria-labelledby="proofx-title">
+    <div class="container card">
+      <h2 id="proofx-title">ProofX</h2>
+      <p>
+        A systems environment exploring mathematical problems through computation.
+        Built around engines that study structure and search for clarity.
+      </p>
+      <div class="btn-row" role="group" aria-label="ProofX links">
+        <a class="btn btn--pill" href="https://proofx.org/" target="_blank" rel="noopener">Visit ProofX</a>
       </div>
     </div>
   </section>
 
-
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section__title">Contact</h2>
-
-      <div class="card">
-        <p>For thoughtful conversations or collaboration:</p>
-        <p>
-          <a href="mailto:hello@alkindix.com" class="contact__email">
-            hello@alkindix.com
-          </a>
-        </p>
+  <!-- ========================= PHOTOGRAPHYX ========================= -->
+  <section id="photographyx" class="section" aria-labelledby="photox-title">
+    <div class="container card">
+      <h2 id="photox-title">PhotographyX</h2>
+      <p>
+        A study of spatial rhythm, geometry, and human–nature boundaries.
+        Focused on quiet composition and underlying order.
+      </p>
+      <div class="btn-row" role="group" aria-label="PhotographyX links">
+        <a class="btn btn--pill" href="https://photographyx.org/" target="_blank" rel="noopener">View Portfolio</a>
       </div>
     </div>
   </section>
 
+  <!-- ========================= MEMOIRX ========================= -->
+  <section id="memoirx" class="section" aria-labelledby="memoirx-title">
+    <div class="container card">
+      <h2 id="memoirx-title">MemoirX</h2>
+      <p>
+        Notes, essays, and quiet thinking — an ongoing record.
+      </p>
+      <div class="btn-row" role="group" aria-label="MemoirX links">
+        <a class="btn btn--pill" href="https://architectofsilence.com/" target="_blank" rel="noopener">Read Essays</a>
+      </div>
+    </div>
+  </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 Alkindi — All Rights Reserved</p>
+  <!-- ========================= CONTACT ========================= -->
+  <section id="contact" class="section" aria-labelledby="contact-title">
+    <div class="container card card--row">
+      <div>
+        <h2 id="contact-title">Contact</h2>
+        <p class="muted">For thoughtful conversation or collaboration:</p>
+      </div>
+      <div class="contact__actions" role="group" aria-label="contact actions">
+        <a class="btn btn--pill" href="mailto:hello@alkindix.com">Email</a>
+        <a class="btn btn--pill" href="https://www.linkedin.com/in/alkindi-network/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= FOOTER ========================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <span class="muted">© 2025 Alkindi</span>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#proofx">ProofX</a>
+        <a href="#photographyx">PhotographyX</a>
+        <a href="#memoirx">MemoirX</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="to-top" href="#top" aria-label="Back to top">↑</a>
     </div>
   </footer>
 
+  <script src="app.js"></script>
 </body>
 </html>
