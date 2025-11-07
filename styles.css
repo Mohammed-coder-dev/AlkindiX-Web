@@ -1,3 +1,8 @@
+/* =========================================================
+   AlkindiX — Minimal Personal CSS
+   Calm, understated, photography-like aesthetic
+========================================================= */
+
 /* RESET */
 * {
   margin: 0;
@@ -17,9 +22,7 @@ html {
   --muted: #9a9a9a;
   --accent: #ffffff;
   --line: rgba(255,255,255,0.1);
-
   --card: #111;
-
   --radius: 10px;
 }
 
@@ -29,7 +32,7 @@ body {
   color: var(--text);
   font-family: "Inter", sans-serif;
   line-height: 1.65;
-  padding-top: 90px; /* header offset */
+  padding-top: 90px;
 }
 
 .container {
@@ -37,32 +40,19 @@ body {
   margin-inline: auto;
 }
 
-.container.narrow {
-  width: min(800px, 92%);
-  margin-inline: auto;
-}
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
 
-/* TYPOGRAPHY */
 h1, h2, h3 {
   font-weight: 600;
   letter-spacing: -0.01em;
   color: var(--accent);
 }
 
-h1 {
-  font-size: clamp(2.4rem, 6vw, 3.6rem);
-  margin-bottom: 1rem;
-}
-
-h2 {
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  margin-bottom: 1rem;
-}
-
-h3 {
-  font-size: 1.25rem;
-  margin-bottom: .75rem;
-}
+h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); margin-bottom: 1rem; }
+h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin-bottom: 1rem; }
+h3 { font-size: 1.25rem; margin-bottom: .75rem; }
 
 p {
   font-size: 1rem;
@@ -71,96 +61,105 @@ p {
   margin-bottom: 1.3rem;
 }
 
-/* LINKS */
+.muted { color: var(--muted); }
+
+/* =========================================================
+   LINKS
+========================================================= */
+
 a {
   color: var(--accent);
   text-decoration: none;
   transition: .2s ease;
 }
+a:hover { opacity: .8; }
 
-a:hover {
-  opacity: .85;
-}
+/* =========================================================
+   HEADER
+========================================================= */
 
-/* HEADER */
-.header {
+.nav {
   position: fixed;
   top: 0; left: 0; right: 0;
-  z-index: 999;
+  z-index: 9999;
   background: rgba(15,15,15,0.75);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
 
-.header__inner {
+.nav__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .9rem 0;
+  height: 64px;
+  padding: 0.75rem 0;
 }
 
 .brand {
-  font-weight: 600;
   font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent);
 }
 
-/* NAV */
+/* Nav links */
 .nav__links {
   display: flex;
   gap: 2rem;
-  list-style: none;
 }
-
 .nav__links a {
   color: var(--text);
   font-size: 0.95rem;
-  opacity: 0.9;
+  opacity: .85;
+}
+.nav__links a:hover { opacity: 1; }
+
+/* Mobile toggle */
+.nav__toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.nav__toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  margin: 4px 0;
 }
 
-.nav__links a:hover {
-  opacity: 1;
-}
-
-/* HERO */
+/* =========================================================
+   HERO
+========================================================= */
 .hero {
-  width: 100%;
   text-align: center;
   padding: 120px 0 90px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.hero__inner {
+.hero__wrap {
   max-width: 720px;
   margin: 0 auto;
   padding: 0 16px;
 }
-
-.hero__text {
+.hero__sub {
   color: var(--muted);
-  margin-top: 1rem;
   font-size: 1.05rem;
+  margin-top: 1rem;
   line-height: 1.7;
 }
 
-/* SECTION */
+/* =========================================================
+   SECTIONS
+========================================================= */
 .section {
   padding: 6rem 0;
 }
 
-.section__header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.section__subtitle {
-  color: var(--muted);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* CARD */
+/* =========================================================
+   CARD
+========================================================= */
 .card {
   background: var(--card);
   border: 1px solid var(--line);
@@ -168,41 +167,73 @@ a:hover {
   border-radius: var(--radius);
   margin-bottom: 2rem;
 }
+.card p:last-child { margin-bottom: 0; }
 
-.card p:last-child {
-  margin-bottom: 0;
+/* =========================================================
+   BUTTONS
+========================================================= */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: var(--accent);
+  color: #000;
+  transition: .25s ease;
+}
+.btn:hover { opacity: .9; }
+
+.btn-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
 }
 
-/* GRID */
-.grid {
-  display: grid;
+/* =========================================================
+   FOOTER
+========================================================= */
+.footer {
+  padding: 3rem 0;
+  border-top: 1px solid var(--line);
+}
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__links {
+  display: flex;
   gap: 1.5rem;
 }
-
-.grid--2 {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.to-top {
+  opacity: .75;
+  font-size: 1.2rem;
 }
+.to-top:hover { opacity: 1; }
 
-/* FOOTER */
-.footer {
-  text-align: center;
-  border-top: 1px solid var(--line);
-  padding: 3rem 0;
-  opacity: 0.65;
-  font-size: 0.9rem;
-}
-
-/* RESPONSIVE */
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 @media (max-width: 768px) {
+
   .nav__links {
-    gap: 1rem;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 1.25rem;
+    background: rgba(15,15,15,0.95);
+    backdrop-filter: blur(12px);
+    border-left: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display: none;
   }
+  .nav__links.active { display: flex; }
 
-  .section {
-    padding: 4rem 0;
-  }
+  .nav__toggle { display: block; }
 
-  .grid--2 {
-    grid-template-columns: 1fr;
-  }
+  .section { padding: 4rem 0; }
 }
