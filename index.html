@@ -1,25 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Alkindi</title>
-  <meta name="description" content="Personal site of Alkindi — exploring systems, computation, and visual structure." />
+  <meta name="description" content="Personal HQ of Alkindi — systems, computation, photography, and slow thinking." />
+
   <link rel="canonical" href="https://alkindix.com/" />
   <link rel="icon" href="/favicon.ico" />
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body>
 
-  <!-- ================= HEADER ================= -->
+  <!-- HEADER -->
   <header class="header" role="banner">
-    <div class="header__inner container">
+    <div class="container header__inner">
       <a class="brand" href="/">Alkindi</a>
 
-      <nav class="nav" aria-label="Main Navigation">
+      <nav class="nav" aria-label="Site Navigation">
         <ul class="nav__links">
           <li><a href="#about">About</a></li>
           <li><a href="#work">Work</a></li>
@@ -31,126 +40,101 @@
   </header>
 
 
-  <!-- ================= HERO ================= -->
-  <section id="hero" class="hero container">
-    <h1>Hi — I’m Alkindi.</h1>
-    <p class="hero__subtitle">
-      I explore systems — how ideas become structure; how structure becomes clarity.
-      This space gathers the threads I follow: computation, photography, and slow thinking.
-    </p>
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="container narrow">
+      <h1 class="hero__title">Hi — I’m Alkindi.</h1>
+      <p class="hero__text">
+        I explore systems — how ideas become structure; how structure becomes clarity.
+        This space threads what I follow: computation, photography, and slow thinking.
+      </p>
+
+      <div class="hero__links">
+        <a href="https://proofx.org" target="_blank" rel="noopener">ProofX</a>
+        <a href="https://architectofsilence.com" target="_blank" rel="noopener">Writing</a>
+        <a href="https://photographyx.org" target="_blank" rel="noopener">PhotographyX</a>
+        <a href="https://www.linkedin.com/in/alkindi-network/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
   </section>
 
 
-  <!-- ================= ABOUT ================= -->
+  <!-- ABOUT -->
   <section id="about" class="section">
-    <header class="section__header container">
+    <div class="container">
       <h2 class="section__title">About</h2>
-    </header>
 
-    <div class="container card">
-      <p>
-        I grew up curious about how things fit together — mechanical tools, coded systems, structural landscapes.
-        Over time that instinct evolved into an interest in computation, geometry, and the textures
-        that sit beneath the surface of ordinary life.
-      </p>
-
-      <p>
-        I try to work with restraint: build quietly, refine deliberately, and take the time to understand what I’m touching.
-        This site is a simple record — not a pitch — of where my attention goes.
-      </p>
+      <div class="card">
+        <p>
+          I grew up curious about how things fit together — mechanical tools, coded systems,
+          structural landscapes. Over time that instinct evolved into an interest in computation,
+          geometry, and the textures that sit beneath the surface of ordinary life.
+        </p>
+        <p>
+          I value clarity and slow thinking: an approach where speed matters less than depth.
+          Most of my work is an attempt to build things that last — frameworks rather than flashes.
+        </p>
+      </div>
     </div>
   </section>
 
 
-  <!-- ================= WORK ================= -->
+  <!-- WORK -->
   <section id="work" class="section">
-    <header class="section__header container">
-      <h2 class="section__title">Selected Work</h2>
-      <p class="section__subtitle">Where I explore ideas across disciplines.</p>
-    </header>
-
-    <div class="container grid grid--2">
+    <div class="container">
+      <h2 class="section__title">Work</h2>
 
       <div class="card">
-        <h3>ProofX</h3>
         <p>
-          A long-term systems project exploring computational structure and mathematical patterns.
+          I spend most of my time building computational tools, studying mathematical structure,
+          and exploring systems thinking through photography.
         </p>
-        <p><a href="https://proofx.org" target="_blank">Visit →</a></p>
-      </div>
 
-      <div class="card">
-        <h3>PhotographyX</h3>
-        <p>
-          A visual practice studying quiet geometry, terrain, and human order.
-        </p>
-        <p><a href="https://photographyx.org" target="_blank">Visit →</a></p>
+        <ul class="list">
+          <li><a href="https://proofx.org" target="_blank">ProofX → computational research</a></li>
+          <li><a href="https://photographyx.org" target="_blank">PhotographyX → structural landscapes</a></li>
+          <li><a href="https://architectofsilence.com" target="_blank">Architect of Silence → essays</a></li>
+        </ul>
       </div>
-
-      <div class="card">
-        <h3>Architect of Silence</h3>
-        <p>
-          Notes + essays on observation, patience, and interior life.
-        </p>
-        <p><a href="https://architectofsilence.com" target="_blank">Visit →</a></p>
-      </div>
-
-      <div class="card">
-        <h3>LinkedIn</h3>
-        <p>
-          Professional profile + academic track.
-        </p>
-        <p><a href="https://www.linkedin.com/in/alkindi-network" target="_blank">Visit →</a></p>
-      </div>
-
     </div>
   </section>
 
 
-  <!-- ================= WRITING ================= -->
+  <!-- WRITING -->
   <section id="writing" class="section">
-    <header class="section__header container">
+    <div class="container">
       <h2 class="section__title">Writing</h2>
-      <p class="section__subtitle">Slow thoughts, occasional notes.</p>
-    </header>
 
-    <div class="container card">
-      <p>
-        I write to slow down: to capture what I’m learning and how my perspectives shift.
-        You can find a small collection of essays at
-        <a href="https://architectofsilence.com" target="_blank">Architect of Silence</a>.
-      </p>
+      <div class="card">
+        <p>
+          I write occasionally about computation, structure, and attention.
+          Longer reflections live at:
+        </p>
+        <p><a href="https://architectofsilence.com" target="_blank">architectofsilence.com</a></p>
+      </div>
     </div>
   </section>
 
 
-  <!-- ================= CONTACT ================= -->
+  <!-- CONTACT -->
   <section id="contact" class="section">
-    <header class="section__header container">
+    <div class="container">
       <h2 class="section__title">Contact</h2>
-    </header>
 
-    <div class="container card">
-      <p>
-        Happy to connect — write anytime.
-      </p>
-      <p>
-        <a class="contact__email" href="mailto:hello@alkindix.com">hello@alkindix.com</a>
-      </p>
+      <div class="card">
+        <p>For thoughtful conversations or collaboration:</p>
+        <p><a href="mailto:hello@alkindix.com" class="contact__email">hello@alkindix.com</a></p>
+      </div>
     </div>
   </section>
 
 
-  <!-- ================= FOOTER ================= -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <p>© <span id="year"></span> Alkindi — All Rights Reserved</p>
+      <p>© 2025 Alkindi — All Rights Reserved</p>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 
 </body>
 </html>
