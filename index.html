@@ -1,161 +1,152 @@
 <!doctype html>
-<html lang="en-GB" dir="ltr" class="no-js" data-theme="auto">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alkindi</title>
 
-  <title>AlkindiX</title>
-  <meta name="description" content="AlkindiX" />
-  <meta name="color-scheme" content="dark light" />
-  <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-  <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta name="format-detection" content="telephone=no, address=no, email=no" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="description" content="Personal site of Alkindi — exploring computation, systems, photography, and quiet craftsmanship." />
   <link rel="canonical" href="https://alkindix.com/" />
+  <link rel="icon" href="/favicon.ico" />
 
-  <!-- Icons / Manifest -->
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
-  <link rel="manifest" href="/site.webmanifest" />
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="/styles.css" media="all" />
-
-  <!-- JS -->
-  <script defer src="/main.js"></script>
-
+  <link rel="stylesheet" href="/styles.css" />
 </head>
+
 <body>
-  <div id="offlineBanner" class="offline-banner" hidden role="status" aria-live="polite">You're offline.</div>
-  <a href="/main" class="skip" aria-label="Skip to main content">Skip to content</a>
 
-  <!-- Header -->
+  <!-- ================= HEADER ================= -->
   <header class="header" role="banner">
-    <div class="container nav">
-      <a href="/" class="brand" aria-label="AlkindiX home">
-        <span class="quantum-dot" aria-hidden="true"></span>
-        <span>AlkindiX</span>
-      </a>
+    <div class="header__inner container">
+      <a class="brand" href="/">Alkindi</a>
 
-      <nav class="menu" aria-label="Primary navigation">
-        <a href="/about" class="nav-link">About</a>
-        <a href="https://proofx.org" target="_blank" rel="noopener" class="nav-link">ProofX</a>
-        <a href="https://architectofsilence.com" target="_blank" rel="noopener" class="nav-link">Memoir</a>
-        <a href="https://photographyx.org/" target="_blank" rel="noopener" class="nav-link">PhotographyX</a>
-        <a href="https://www.linkedin.com/in/alkindi-network/" class="nav-link">Honors</a>
-        <a href="https://www.linkedin.com/in/alkindi-network/" class="nav-link">LinkedIn</a>
+      <nav class="nav" aria-label="Main Navigation">
+        <ul class="nav__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#writing">Writing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
-
-      <div class="menu-btn" style="display: none;">
-        <button class="btn" aria-expanded="false" aria-controls="menuPanel">Menu</button>
-      </div>
     </div>
   </header>
 
-  <main id="main">
-    <!-- Hero Section -->
-    <section class="container hero" id="top" aria-label="Hero">
-      <div class="hero-pattern" aria-hidden="true"></div>
-      <span class="pill">Quantum Computing × Advanced Mathematics</span>
-      <h1>Solving the World's Hardest Unsolved Conjectures</h1>
-      <p class="lead">AlkindiX develops research-grade quantum computing systems for mathematical verification. Currently tackling Collatz, Riemann, and other frontier conjectures through ProofX and quantum-classical hybrid approaches.</p>
-      <div style="display: flex; gap: 16px; justify-content: center; margin-top: 32px;">
-        <a href="https://www.linkedin.com/in/alkindi-network/" class="btn primary">Explore Research</a>
-        <a href="https://www.linkedin.com/in/alkindi-network/" class="btn">View Case Studies</a>
+
+  <!-- ================= HERO ================= -->
+  <section id="hero" class="hero container">
+    <h1>Hi — I'm Alkindi.</h1>
+    <p class="hero__subtitle">
+      I care about systems, engineering, and the disciplines that teach us how things hold together.
+      My interests span computation, visual structure, and long-form thinking.
+    </p>
+  </section>
+
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="section">
+    <div class="section__header container">
+      <h2 class="section__title">About</h2>
+    </div>
+
+    <div class="container">
+      <p>
+        I grew up drawn to the inner workings of everyday systems — from simple tools to structured landscapes.
+        That instinct later shaped my interests around computation, math, and the way ideas translate into real-world artifacts.
+      </p>
+
+      <p>
+        I try to keep my work grounded: learn deeply, build deliberately, and follow curiosity without theatrics.
+        This site is not a portfolio as much as a quiet record of what I care about and where I'm spending time.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ================= WORK ================= -->
+  <section id="work" class="section">
+    <div class="section__header container">
+      <h2 class="section__title">Selected Work</h2>
+      <p class="section__subtitle">A few places where I explore ideas.</p>
+    </div>
+
+    <div class="container grid grid--2">
+      <div class="card">
+        <h3>ProofX</h3>
+        <p>
+          A long-term systems project exploring computational structure and mathematical questions.
+        </p>
+        <a href="https://proofx.org" target="_blank">Visit →</a>
       </div>
-    </section>
 
-    <!-- About Section -->
-    <section class="section" id="about" aria-labelledby="about-title">
-      <div class="container">
-        <h2 id="about-title">About AlkindiX</h2>
-        <div class="card">
-          <p>We build quantum-classical systems that push the boundaries of mathematical verification. Our work focuses on developing scalable approaches to unsolved conjectures through hybrid quantum algorithms and advanced computational frameworks.</p>
-          
-          <h3 style="margin-top: 24px;">Core Platforms</h3>
-          <p><strong>ProofX</strong> → A quantum-enhanced research environment for frontier mathematical conjectures. CollatzLab, its flagship engine, pioneers hybrid quantum-classical exploration of sequence dynamics and stopping-time analysis.</p>
-          
-          <h3 style="margin-top: 24px;">Research Philosophy</h3>
-          <p>We operate at the intersection of quantum computation and pure mathematics, building systems that endure beyond current technological limitations. Our approach combines rigorous mathematical foundations with practical quantum implementation strategies.</p>
-        </div>
+      <div class="card">
+        <h3>PhotographyX</h3>
+        <p>
+          A visual practice studying human order, terrain, and quiet geometry.
+        </p>
+        <a href="https://photographyx.org" target="_blank">Visit →</a>
       </div>
-    </section>
 
-    <!-- Research Highlights -->
-    <section class="section" id="research-highlights">
-      <div class="container">
-        <h2>Research Highlights</h2>
-        <div class="grid cols-2">
-          <div class="card">
-            <h3>Quantum Collatz Verification</h3>
-            <p>Developing quantum circuits for efficient Collatz sequence verification with exponential speedup potential over classical approaches.</p>
-            <a href="/research/collatz" class="btn" style="margin-top: 12px;">Read Paper</a>
-          </div>
-          <div class="card">
-            <h3>Riemann Zeta Analysis</h3>
-            <p>Quantum algorithms for analyzing zeta function properties and zero distribution patterns using phase estimation techniques.</p>
-            <a href="/research/riemann" class="btn" style="margin-top: 12px;">Read Paper</a>
-          </div>
-        </div>
+      <div class="card">
+        <h3>Architect of Silence</h3>
+        <p>
+          Essays on observation, craft, and interior life.
+        </p>
+        <a href="https://architectofsilence.com" target="_blank">Visit →</a>
       </div>
-    </section>
 
-    <!-- Honors Section -->
-    <section class="section" id="honors" aria-labelledby="honors-title">
-      <div class="container">
-        <h2 id="honors-title">Honors & Recognition</h2>
-        <div class="grid cols-2">
-          <div class="card">
-            <img src="/logos/heac.jpg" alt="HEAC National Scholarship" style="width:120px; margin-bottom:12px;">
-            <h3>HEAC National Scholarship</h3>
-            <p class="text-muted">Full scholarship awarded for exceptional academic performance and research potential in advanced computing.</p>
-            <div class="pill">2024</div>
-          </div>
-
-          <div class="card">
-            <img src="/logos/e14.jpeg" alt="MIT E14 Fund Recognition" style="width:120px; margin-bottom:12px;">
-            <h3>MIT E14 Fund Recognition</h3>
-            <p class="text-muted">Selected for mentorship and recognition by MIT E14 Fund for innovative approaches to quantum computing research.</p>
-            <div class="pill">2024</div>
-          </div>
-        </div>
+      <div class="card">
+        <h3>LinkedIn</h3>
+        <p>
+          Professional profile and current academic engagements.
+        </p>
+        <a href="https://www.linkedin.com/in/alkindi-network" target="_blank">Visit →</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section class="section" id="contact" aria-labelledby="contact-title">
-      <div class="container card" style="text-align: center;">
-        <h2 id="contact-title">Research Collaborations</h2>
-        <p class="lead">Interested in quantum computing research or mathematical verification systems?</p>
-        <div style="display: flex; gap: 12px; justify-content: center; margin-top: 24px;">
-          <a href="mailto:research@alkindix.com" class="btn primary">Email Research Team</a>
-          <a href="/case-studies" class="btn">View Technical Work</a>
-        </div>
-      </div>
-    </section>
-  </main>
 
-  <!-- Footer -->
-  <footer style="border-top: 1px solid #21262d; padding: 32px 0; margin-top: 48px;">
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-      <div>© <span id="year"></span> AlkindiX. All rights reserved.</div>
-      <nav aria-label="Footer">
-        <div style="display: flex; gap: 16px;">
-          <a href="/research">Research</a>
-          <a href="/case-studies">Case Studies</a>
-          <a href="/honors">Honors</a>
-          <a href="/terms">Terms</a>
-          <a href="/privacy">Privacy</a>
-        </div>
-      </nav>
+  <!-- ================= WRITING ================= -->
+  <section id="writing" class="section">
+    <div class="section__header container">
+      <h2 class="section__title">Writing</h2>
+      <p class="section__subtitle">Notes, essays, and unfinished thoughts.</p>
+    </div>
+
+    <div class="container">
+      <p>
+        I write occasionally — to make sense of what I’m learning and to slow down my thinking.
+        A selection of essays is gathered on <a href="https://architectofsilence.com" target="_blank">Architect of Silence</a>.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="section">
+    <div class="section__header container">
+      <h2 class="section__title">Contact</h2>
+    </div>
+
+    <div class="container">
+      <p>Feel free to reach out — I’m always open to sincere conversation.</p>
+      <p>
+        <a class="contact__email" href="mailto:hello@alkindix.com">
+          hello@alkindix.com
+        </a>
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Alkindi — All Rights Reserved</p>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
